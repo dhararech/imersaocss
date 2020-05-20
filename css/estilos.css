@@ -8,7 +8,7 @@ body {
   /*background-image: url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg');*/
   background-color: darkgrey;
   background-size: auto 100vh; 
-  font-family: Arial;
+  font-family: 'Source Code Pro', monospace;
   height: 100vh;
   font-size: 10px;
 }
@@ -28,7 +28,7 @@ body {
 }
 
 header{
-  height: 50vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;  
@@ -74,13 +74,39 @@ a:hover {
 
 .site-title{
   font-size: 4em;
+  font-family: 'Lateef', cursive;
 }
 
 .site-subtitle {
  font-style: italic;
+ font-family: 'Lateef', cursive;
+}
+
+.portifolio{
+  padding: 2em;
+  margin-bottom: 3em;
+  font-size: 1em;
+}
+
+.portifolio h2{
+  font-family: 'Source Code Pro', monospace;
+  padding: 2em;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.portifolio .grid{
+  display: grid;
+  gap: 2em;/*espeçamento da coluna ou linha*/
+  grid-template-columns: 240px 500px 300px;
+}
+
+.portifolio figure{
+  text-align: center;
 }
 
 .img-portfolio{
   width: 180px;
   height: 180px;
 }
+
