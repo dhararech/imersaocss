@@ -84,21 +84,35 @@ a:hover {
 
 .portifolio{
   padding: 2em;
-  margin-bottom: 3em;
-  font-size: 1em;
+ height: 100vh;
 }
 
 .portifolio h2{
   font-family: 'Source Code Pro', monospace;
   padding: 2em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5em;/*caixa" para o lado*/
   font-size: 2em;
 }
 
 .portifolio .grid{
-  display: grid;
-  gap: 2em;/*espeçamento da coluna ou linha*/
-  grid-template-columns: 240px 500px 300px;
+  display: grid; /*grid determino a quantidade de coluna/ flex ele que determina o numero e a posição das colunas*/
+  gap: 9em;/*espeçamento da coluna ou linha*/ 
+}
+
+/*condicao para ficar em duas colunas dependendo da tela*/
+@media (min-width: 560px){
+  .portifolio .grid{ 
+  grid-template-columns: 240px 240px; /*largira de cada coluna(3 colunas)*/
+  }    
+}
+
+@media (min-width: 880px){
+  .portifolio .grid{   
+  grid-template-columns: repeat(3, 260px); /*largira de cada coluna(3 colunas)*/
+  align-items: center;
+  justify-content: center;/*deixa o conteudo centralizado*/
+  height: calc(100vh - 8em - 48px);
+  }    
 }
 
 .portifolio figure{
@@ -106,7 +120,19 @@ a:hover {
 }
 
 .img-portfolio{
-  width: 180px;
-  height: 180px;
+  width: 280px;
+  height: 240px;
+  object-fit: cover; /*resolve problema da imagem distorcisa*/
+  object-position: left bottom;
+  border-radius: 10px; /*arredondar bordas*/
 }
+
+@media (min-width: 1200px){
+  .img-portfolio{    
+    height:auto;
+    width: 100%;
+  }
+}
+
+
 
