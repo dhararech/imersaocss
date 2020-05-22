@@ -35,10 +35,11 @@ header{
 }
 
 .menu {
-  background-color: white;
+  background-color:white;
   position: fixed; /*deixa o menu fixo na tela(menu sempre amostra)*/
   width: 100vw;
   top: 0;
+ 
 }
 
 .menu ul {
@@ -55,15 +56,25 @@ header{
  display: block;
   /*afata o conteúdo de texto das bordas do elemento*/
   padding: 20px 20px; 
+  transition: backgrod-color 1s, color 1s;
+}
+.menu a:hover{
+  text-decoration: none;/*tira o underline*/
+  background-color: violet;
+  color: white;/*troca cor quando o mause passa*/
 }
 
 a {
-  color: teal;
+  color:black;
   text-decoration: none;
 }
 /*quando passado o mouse fica em forma de link*/
 a:hover {
   text-decoration: underline;
+}
+
+.titulo{
+  transform: scale(0.2) translate(50vh);
 }
 
 .site-subtitle, 
@@ -82,12 +93,13 @@ a:hover {
  font-family: 'Lateef', cursive;
 }
 
-.portifolio{
+.contato, .portifolio{
   padding: 2em;
- height: 100vh;
+  min-height: 100vh; /*pelo menos essa altura*/
+  text-align: center;
 }
 
-.portifolio h2{
+.contato h2, .portifolio h2{
   font-family: 'Source Code Pro', monospace;
   padding: 2em;
   margin-bottom: 1.5em;/*caixa" para o lado*/
@@ -124,7 +136,11 @@ a:hover {
   height: 240px;
   object-fit: cover; /*resolve problema da imagem distorcisa*/
   object-position: left bottom;
-  border-radius: 10px; /*arredondar bordas*/
+  border-radius: 10px; /*arredondar bordas*/ 
+}
+
+.img-portfolio:hover{
+   transform: scale(1.2) /*quando o mouse passa por cima da imagem ela aumenta rotete rotate(45deg); rodaciona a imagem*/
 }
 
 @media (min-width: 1200px){
@@ -132,6 +148,17 @@ a:hover {
     height:auto;
     width: 100%;
   }
+}
+
+
+.contato a {
+  color: whitesmoke;
+  font-size: 3em;    
+}
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;/*nome desabilita*/
+  text-shadow: 0px 0px 10px whitesmoke ;/*coloca uma sombra no elemento*/
 }
 
 
